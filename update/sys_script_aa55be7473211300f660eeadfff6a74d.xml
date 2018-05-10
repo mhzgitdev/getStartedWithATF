@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sc_req_item</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="sc_req_item">cat_item.category=c8fe7d3c73a11300f660eeadfff6a75f^EQ<item display_table="sc_category" display_value="Robotics" endquery="false" field="cat_item.category" goto="false" newquery="false" operator="=" or="false" value="c8fe7d3c73a11300f660eeadfff6a75f"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Create order for items from robotics</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// request item has just been approved
+	if (current.approval == 'approved' && previous.approval != 'approved') {
+		var order = new GlideRecord('sn_custom_robots_order');
+		order.buyer = current.request.requested_for;
+		order.requested = new GlideDateTime();
+		order.request_item = current.sys_id;
+		
+		// stock robot - add its parts to a new order
+		if (current.variable_pool.choose_a_configuration) {
+			order.from_template = current.variable_pool.choose_a_configuration;
+			var template = new GlideRecord('sn_custom_robots_template');
+			template.get(current.variable_pool.choose_a_configuration); // sys_id
+			if (template.head)
+				order.head = template.head;
+			if (template.head)
+				order.arms = template.arms;
+			if (template.body)
+				order.body = template.body;
+			if (template.legs)
+				order.legs = template.legs;
+		} else if (!gs.nil(current.variable_pool.choose_head)) {
+			// custom robot - add its parts from variables
+			order.head = current.variable_pool.choose_head;
+			order.arms = current.variable_pool.choose_arms;
+			order.body = current.variable_pool.choose_body;
+			order.legs = current.variable_pool.choose_legs;
+		}
+		
+		order.price = current.price;
+		var orderId = order.insert();
+		gs.info('sn_custom_robots_order created: ' + orderId);
+		// send ui notification
+		gs.addInfoMessage(gs.getMessage("Request approved, {0}{1}{2} created", ["<a href='/sn_custom_robots_order.do?sys_id=" + orderId + "'>", order.number, "</a>"]));
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-04-16 09:09:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>aa55be7473211300f660eeadfff6a74d</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>Create order for items from robotics</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Custom Robots" source="sn_custom_robots">5cb27d3873a11300f660eeadfff6a755</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Custom Robots">5cb27d3873a11300f660eeadfff6a755</sys_scope>
+        <sys_update_name>sys_script_aa55be7473211300f660eeadfff6a74d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-04-18 09:19:54</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=aa55be7473211300f660eeadfff6a74d"/>
+</record_update>

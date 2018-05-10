@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_custom_robots_part">
+    <sn_custom_robots_part action="INSERT_OR_UPDATE">
+        <name>Levitation drive</name>
+        <picture/>
+        <price>2240</price>
+        <sys_class_name>sn_custom_robots_part</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-04-16 06:12:53</sys_created_on>
+        <sys_id>f56d8a3073e11300f660eeadfff6a7e4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Levitation drive</sys_name>
+        <sys_package display_value="Custom Robots" source="sn_custom_robots">5cb27d3873a11300f660eeadfff6a755</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Custom Robots">5cb27d3873a11300f660eeadfff6a755</sys_scope>
+        <sys_update_name>sn_custom_robots_part_f56d8a3073e11300f660eeadfff6a7e4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-04-16 07:19:23</sys_updated_on>
+        <type>legs</type>
+    </sn_custom_robots_part>
+    <fx_price action="delete_multiple" query="id=f56d8a3073e11300f660eeadfff6a7e4"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>2240</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>f56d8a3073e11300f660eeadfff6a7e4</id>
+        <parent/>
+        <reference_amount>2240</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2018-05-08 23:59:07</sys_created_on>
+        <sys_id>a584134cf90213007f44644b5ee93042</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-05-08 23:59:07</sys_updated_on>
+        <table>sn_custom_robots_part</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

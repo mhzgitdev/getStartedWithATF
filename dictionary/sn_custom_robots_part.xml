@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" extends="sys_metadata" label="Part" max_length="40" name="sn_custom_robots_part" type="collection">
+        <element attributes="no_truncate=true" label="Name" max_length="255" name="name" type="string_full_utf8"/>
+        <element attributes="pdf_cell_type=image,edge_encryption_enabled=true" label="Picture" max_length="40" name="picture" type="user_image"/>
+        <element attributes="omit_sys_original=true,edge_encryption_enabled=true" label="Price" max_length="20" name="price" type="price"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="head" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Head" sequence="1" value="head"/>
+                <element inactive_on_update="false" label="Arms" sequence="2" value="arms"/>
+                <element inactive_on_update="false" label="Body" sequence="3" value="body"/>
+                <element inactive_on_update="false" label="Legs" sequence="4" value="legs"/>
+            </choice>
+        </element>
+    </element>
+</database>

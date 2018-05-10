@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <description/>
+        <event_name>sn_custom_robots.robot_order_shipped</event_name>
+        <fired_by>"shipped" business rule on order table</fired_by>
+        <queue/>
+        <suffix>robot_order_shipped</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-04-18 09:33:53</sys_created_on>
+        <sys_id>338e01ed73a11300f660eeadfff6a7aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sn_custom_robots.robot_order_shipped</sys_name>
+        <sys_package display_value="Custom Robots" source="sn_custom_robots">5cb27d3873a11300f660eeadfff6a755</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Custom Robots">5cb27d3873a11300f660eeadfff6a755</sys_scope>
+        <sys_update_name>sysevent_register_338e01ed73a11300f660eeadfff6a7aa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-04-18 09:33:53</sys_updated_on>
+        <table>sn_custom_robots_order</table>
+    </sysevent_register>
+</record_update>

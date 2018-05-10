@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_custom_robots_part">
+    <sn_custom_robots_part action="INSERT_OR_UPDATE">
+        <name>Refreshment dispenser</name>
+        <picture/>
+        <price>50</price>
+        <sys_class_name>sn_custom_robots_part</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-04-18 08:26:17</sys_created_on>
+        <sys_id>7a5e706973a11300f660eeadfff6a78a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Refreshment dispenser</sys_name>
+        <sys_package display_value="Custom Robots" source="sn_custom_robots">5cb27d3873a11300f660eeadfff6a755</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Custom Robots">5cb27d3873a11300f660eeadfff6a755</sys_scope>
+        <sys_update_name>sn_custom_robots_part_7a5e706973a11300f660eeadfff6a78a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-04-18 08:26:17</sys_updated_on>
+        <type>head</type>
+    </sn_custom_robots_part>
+    <fx_price action="delete_multiple" query="id=7a5e706973a11300f660eeadfff6a78a"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>50</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>7a5e706973a11300f660eeadfff6a78a</id>
+        <parent/>
+        <reference_amount>50</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-04-18 08:26:17</sys_created_on>
+        <sys_id>5e3f706973a11300f660eeadfff6a78f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-04-18 08:26:17</sys_updated_on>
+        <table>sn_custom_robots_part</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

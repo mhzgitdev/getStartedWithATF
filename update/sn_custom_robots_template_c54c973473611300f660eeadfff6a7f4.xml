@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_custom_robots_template">
+    <sn_custom_robots_template action="INSERT_OR_UPDATE">
+        <arms display_value="Jet wings">3a8d4e3073e11300f660eeadfff6a74d</arms>
+        <body display_value="Airtight storage compartment">9a659eb073e11300f660eeadfff6a703</body>
+        <description/>
+        <head display_value="Floating orb with LED face">83801e7073e11300f660eeadfff6a7a0</head>
+        <legs display_value="Levitation drive">f56d8a3073e11300f660eeadfff6a7e4</legs>
+        <name>Classified.</name>
+        <needs_update>false</needs_update>
+        <price>2565</price>
+        <sys_class_name>sn_custom_robots_template</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-04-16 11:57:28</sys_created_on>
+        <sys_id>c54c973473611300f660eeadfff6a7f4</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>Classified.</sys_name>
+        <sys_package display_value="Custom Robots" source="sn_custom_robots">5cb27d3873a11300f660eeadfff6a755</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Custom Robots">5cb27d3873a11300f660eeadfff6a755</sys_scope>
+        <sys_update_name>sn_custom_robots_template_c54c973473611300f660eeadfff6a7f4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-04-20 07:36:20</sys_updated_on>
+    </sn_custom_robots_template>
+    <fx_price action="delete_multiple" query="id=c54c973473611300f660eeadfff6a7f4"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>2565</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>c54c973473611300f660eeadfff6a7f4</id>
+        <parent/>
+        <reference_amount>2565</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-04-16 12:52:30</sys_created_on>
+        <sys_id>6ef82f3873611300f660eeadfff6a7e2</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-04-20 07:36:20</sys_updated_on>
+        <table>sn_custom_robots_template</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

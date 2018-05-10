@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_custom_robots_part">
+    <sn_custom_robots_part action="INSERT_OR_UPDATE">
+        <name>Drone landing pad</name>
+        <picture/>
+        <price>25</price>
+        <sys_class_name>sn_custom_robots_part</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-04-16 07:28:56</sys_created_on>
+        <sys_id>df9e1ab473e11300f660eeadfff6a7b3</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Drone landing pad</sys_name>
+        <sys_package display_value="Custom Robots" source="sn_custom_robots">5cb27d3873a11300f660eeadfff6a755</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Custom Robots">5cb27d3873a11300f660eeadfff6a755</sys_scope>
+        <sys_update_name>sn_custom_robots_part_df9e1ab473e11300f660eeadfff6a7b3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-04-18 08:31:57</sys_updated_on>
+        <type>head</type>
+    </sn_custom_robots_part>
+    <fx_price action="delete_multiple" query="id=df9e1ab473e11300f660eeadfff6a7b3"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>25</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>df9e1ab473e11300f660eeadfff6a7b3</id>
+        <parent/>
+        <reference_amount>25</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-04-16 12:52:18</sys_created_on>
+        <sys_id>2fe82f3873611300f660eeadfff6a779</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-04-18 08:31:57</sys_updated_on>
+        <table>sn_custom_robots_part</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

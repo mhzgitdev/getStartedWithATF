@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" extends="sys_metadata" label="Order" max_length="40" name="sn_custom_robots_order" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Arms" max_length="32" name="arms" reference="sn_custom_robots_part" reference_qual="type=arms^EQ" reference_qual_condition="type=arms^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Body" max_length="32" name="body" reference="sn_custom_robots_part" reference_qual="type=body^EQ" reference_qual_condition="type=body^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Buyer" max_length="32" name="buyer" reference="sys_user" type="reference"/>
+        <element attributes="readonly_clickthrough=true,edge_encryption_enabled=true" label="From template" max_length="32" name="from_template" read_only="true" reference="sn_custom_robots_template" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Head" max_length="32" name="head" reference="sn_custom_robots_part" reference_qual="type=head^EQ" reference_qual_condition="type=head^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Legs" max_length="32" name="legs" reference="sn_custom_robots_part" reference_qual="type=legs^EQ" reference_qual_condition="type=legs^EQ" type="reference"/>
+        <element default="javascript:getNextObjNumberPadded();" dynamic_default_value="fdcb83a85f220100a9ad2572f2b4773c" label="Number" max_length="40" name="number" read_only="true" type="string" use_dynamic_default="true"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer,edge_encryption_enabled=true" label="Price" max_length="20" name="price" type="price"/>
+        <element attributes="edge_encryption_enabled=true" label="Requested" max_length="40" name="requested" type="glide_date_time"/>
+        <element attributes="readonly_clickthrough=true,edge_encryption_enabled=true" label="Request Item" max_length="32" name="request_item" read_only="true" reference="sc_req_item" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Shipped" max_length="40" name="shipped" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="open" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Open" sequence="1" value="open"/>
+                <element inactive_on_update="false" label="Processing" sequence="2" value="processing"/>
+                <element inactive_on_update="false" label="Closed" sequence="3" value="closed"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="head"/>
+        </index>
+        <index name="index2">
+            <element name="from_template"/>
+        </index>
+        <index name="index3">
+            <element name="legs"/>
+        </index>
+        <index name="index4">
+            <element name="arms"/>
+        </index>
+        <index name="index5">
+            <element name="request_item"/>
+        </index>
+        <index name="index6">
+            <element name="body"/>
+        </index>
+        <index name="index7">
+            <element name="buyer"/>
+        </index>
+    </element>
+</database>

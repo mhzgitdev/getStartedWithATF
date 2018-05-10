@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2/>
+        <comments/>
+        <condition>gs.nil(current.shipped)</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>true</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint>Mark order as shipped today, close it, and close the request item as completed</hint>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Mark as shipped</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[action.setRedirectURL(current);
+current.shipped = new GlideDateTime();
+current.status = 'closed';
+current.update();
+
+var urlToRequestItemOpenTag =
+	"<a href='/sc_req_item.do%3Fsys_id%3D" + current.request_item.sys_id + "'>";
+
+gs.addInfoMessage(gs.getMessage("Order shipped on {0}, {1}{2}{3} is closed", [current.shipped.getDisplayValue(), "<a href='/sc_req_item.do?sys_id=" + current.request_item.sys_id + "'>", current.request_item.getDisplayValue(), "</a>"]));
+
+// mark request item Closed Complete
+var reqItem = new GlideRecord('sc_req_item');
+reqItem.get(current.request_item.sys_id);
+reqItem.state = '3';
+reqItem.update();
+]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-04-18 04:24:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1c764c2573611300f660eeadfff6a7b4</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>Mark as shipped</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Custom Robots" source="sn_custom_robots">5cb27d3873a11300f660eeadfff6a755</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Custom Robots">5cb27d3873a11300f660eeadfff6a755</sys_scope>
+        <sys_update_name>sys_ui_action_1c764c2573611300f660eeadfff6a7b4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-04-18 09:18:51</sys_updated_on>
+        <table>sn_custom_robots_order</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

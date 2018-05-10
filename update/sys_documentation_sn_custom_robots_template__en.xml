@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="Template" language="en" table="sn_custom_robots_template">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Template</label>
+            <language>en</language>
+            <name>sn_custom_robots_template</name>
+            <plural>Templates</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-04-16 11:32:39</sys_created_on>
+            <sys_id>70b65fb073611300f660eeadfff6a737</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Template</sys_name>
+            <sys_package display_value="Custom Robots" source="sn_custom_robots">5cb27d3873a11300f660eeadfff6a755</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Custom Robots">5cb27d3873a11300f660eeadfff6a755</sys_scope>
+            <sys_update_name>sys_documentation_sn_custom_robots_template__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-04-16 11:32:39</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_custom_robots_template">
+    <sn_custom_robots_template action="INSERT_OR_UPDATE">
+        <arms display_value="Articulated clamps">d6bc4a3073e11300f660eeadfff6a7dd</arms>
+        <body display_value="Large pneumatic cylinder">3bbd137473611300f660eeadfff6a7d0</body>
+        <description/>
+        <head display_value="Binocular head with dual shades">e9ac8a3073e11300f660eeadfff6a72d</head>
+        <legs display_value="Tank treads">986d8a3073e11300f660eeadfff6a7cc</legs>
+        <name>Number 5</name>
+        <needs_update>false</needs_update>
+        <price>122.04</price>
+        <sys_class_name>sn_custom_robots_template</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-04-16 12:02:12</sys_created_on>
+        <sys_id>cd6c5b3473611300f660eeadfff6a7ed</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Number 5</sys_name>
+        <sys_package display_value="Custom Robots" source="sn_custom_robots">5cb27d3873a11300f660eeadfff6a755</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Custom Robots">5cb27d3873a11300f660eeadfff6a755</sys_scope>
+        <sys_update_name>sn_custom_robots_template_cd6c5b3473611300f660eeadfff6a7ed</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-04-20 07:25:16</sys_updated_on>
+    </sn_custom_robots_template>
+    <fx_price action="delete_multiple" query="id=cd6c5b3473611300f660eeadfff6a7ed"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>122.04</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>cd6c5b3473611300f660eeadfff6a7ed</id>
+        <parent/>
+        <reference_amount>122.04</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2018-04-20 04:39:38</sys_created_on>
+        <sys_id>718e1a8673211300f660eeadfff6a7c7</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-04-20 07:25:16</sys_updated_on>
+        <table>sn_custom_robots_template</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>
